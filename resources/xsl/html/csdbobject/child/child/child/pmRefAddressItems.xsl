@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+  <xsl:include href="./child/pmTitle.xsl"/>
+  <xsl:include href="./child/issueDate.xsl"/>
+  <xsl:include href="./child/pubMedia.xsl"/>
+  <xsl:include href="./child/shortPmTitle.xsl"/>
+  
+  <!-- Sudah di include di xsl lain -->
+  <!-- <xsl:include href="./child/security.xsl"/> -->
+  <!-- <xsl:include href="./child/responsiblePartnerCompany.xsl"/> -->
+
+  <xsl:template match="pmRefAddressItems">
+    <span class="pmRefAddressItems">
+      <xsl:apply-templates/>
+    </span>
+  </xsl:template>
+
+</xsl:stylesheet>
